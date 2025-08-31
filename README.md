@@ -77,6 +77,31 @@ This project focuses on verifying the ALU design using **SystemVerilog** and the
 | 13  | ROR_A_B |
 
 ---
+## 🛠 Testbench Components & Flow
+
+- **Transaction** – Defines randomized and non-randomized input signals with constraints, copy, and display methods. Used to generate DUT inputs.
+
+- **Generator** – Creates and randomizes transactions, then sends them to the driver via mailbox.
+
+- **Driver** – Drives input transactions to the DUT. It applies inputs and forwards them to the reference model.
+
+- **Monitor** – Captures DUT outputs, packages them into transactions, and sends them to the scoreboard.
+
+- **Scoreboard** – Compares DUT results with reference model results; updates pass/fail counters.
+
+- **Reference Model** – Mimics ALU functionality and provides expected results for comparison.
+
+- **Environment** – Instantiates and connects all components (generator, driver, monitor, scoreboard, reference model) using mailboxes.
+
+- **Test** – Builds the environment, configures components, and runs the verification flow.
+
+- **Top** – Generates clock instantiates the DUT, interface, and test components, and launches simulation.
+
+- **Interface** – Groups DUT signals, defines clocking blocks and modports for driver, monitor, and reference model.
+
+- **DUV (Design Under Verification)** – The ALU module being tested against its functional specification.
+
+---
 
 # 🧪 Verification Results
 
