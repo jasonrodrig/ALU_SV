@@ -1,6 +1,3 @@
-
-//`include "defines.sv"
-//`include "alu_transaction.sv"
 class alu_driver;
 
 	alu_transaction driver_trans ;
@@ -15,7 +12,7 @@ class alu_driver;
 		INP_VALID:      coverpoint driver_trans.inp_valid { bins inp_valid[] = { 0 , 1 , 2 , 3 }; }
 		CARRY_IN:       coverpoint driver_trans.cin       { bins cin[]       = { 0 , 1 }; }
 		COMMAND:        coverpoint driver_trans.cmd       { 
-      bins arith_cmd[] = {[0:10]} iff(driver_trans.mode == 1);
+			bins arith_cmd[] = {[0:10]} iff(driver_trans.mode == 1);
 			bins logic_cmd[] = {[0:13]} iff(driver_trans.mode == 0);
 		}
 		OPA       : coverpoint driver_trans.opa { bins opa = {[0:255]} with (item / 32 ); }
@@ -96,7 +93,7 @@ class alu_driver;
 							else
 							begin
 								drive_signals(); 
-							  delay();
+								delay();
 							end
 						end
 					end

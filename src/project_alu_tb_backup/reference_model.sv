@@ -1,5 +1,3 @@
-//`include "defines.sv"
-//`include "alu_transaction.sv"
 class alu_reference_model;
 
 	alu_transaction ref_t;
@@ -17,54 +15,46 @@ class alu_reference_model;
 		this.driv2ref = driv2ref;
 		this.ref2scb  = ref2scb;
 		this.vif      = vif;
-
 	endfunction
-
 	reg [ RESULT_WIDTH - 1 : 0 ] t_mul;
-
 	task start();
-
 		for(int i = 0; i < `no_of_transaction; i++)
 		begin
-	
-		driv2ref.get(ref_t);	
-	  repeat(3)@(vif.reference_cb);
-		if( ( ref_t.cmd == 9 || ref_t.cmd == 10 ) && ( ref_t.mode == 1 ) )
-			repeat(1)@(vif.reference_cb);
+			driv2ref.get(ref_t);	
+			repeat(3)@(vif.reference_cb);
+			if( ( ref_t.cmd == 9 || ref_t.cmd == 10 ) && ( ref_t.mode == 1 ) )
+				repeat(1)@(vif.reference_cb);
 
-	  //driv2ref.get(ref_t);
-      
-    if(ref_t.rst || !ref_t.ce)begin
-			ref_t.res = 'bz ;
-			ref_t.oflow = 'bz; 
-			ref_t.cout = 'bz;
-			ref_t.g = 'bz ; 
-			ref_t.l = 'bz; 
-			ref_t.e = 'bz; 
-			ref_t.err = 'bz;
-		end
-		else if(ref_t.ce)begin
-			ref_t.res ='bz ;
-			ref_t.oflow = 'bz; 
-			ref_t.cout = 'bz;
-			ref_t.g = 'bz ; 
-			ref_t.l = 'bz; 
-			ref_t.e = 'bz; 
-			ref_t.err = 'bz;
-			t_mul = 'b0;
+			if(ref_t.rst || !ref_t.ce)begin
+				ref_t.res = 'bz ;
+				ref_t.oflow = 'bz; 
+				ref_t.cout = 'bz;
+				ref_t.g = 'bz ; 
+				ref_t.l = 'bz; 
+				ref_t.e = 'bz; 
+				ref_t.err = 'bz;
+			end
+			else if(ref_t.ce)begin
+				ref_t.res ='bz ;
+				ref_t.oflow = 'bz; 
+				ref_t.cout = 'bz;
+				ref_t.g = 'bz ; 
+				ref_t.l = 'bz; 
+				ref_t.e = 'bz; 
+				ref_t.err = 'bz;
+				t_mul = 'b0;
 
-			if( ref_t.mode )
-				arithematic_operation(ref_t);
-			else
-				logical_operation(ref_t);
-		end
-			//repeat(1)@(vif.reference_cb);
+				if( ref_t.mode )
+					arithematic_operation(ref_t);
+				else
+					logical_operation(ref_t);
+			end
 			ref_t.display("REFERENCE SIGNALS ");
 			ref2scb.put(ref_t);
-	  end
+		end
 	endtask
 
-  task arithematic_operation(input alu_transaction ref_t);
+	task arithematic_operation(input alu_transaction ref_t);
 		case(ref_t.cmd)
 
 			0:begin // ADD WITHOUT CIN
@@ -192,8 +182,8 @@ class alu_reference_model;
 		endcase    
 	endtask
 
-task logical_operation(input alu_transaction ref_t);
-	case(ref_t.cmd)
+	task logical_operation(input alu_transaction ref_t);
+		case(ref_t.cmd)
 			0: begin // BITWISE AND
 				if(ref_t.inp_valid == 3) begin
 					ref_t.res = ( ref_t.opa & ref_t.opb ) & ( { { `DATA_WIDTH{1'b0} } , { `DATA_WIDTH{1'b1} } } ); 
@@ -279,34 +269,33 @@ task logical_operation(input alu_transaction ref_t);
 			end
 
 
-      12: begin
-          if(ref_t.inp_valid == 3) begin
-					 ref_t.res = 
-						 ( ( ref_t.opa << ref_t.opb[($clog2(`DATA_WIDTH) - 1):0] ) | (ref_t.opa >> ( `DATA_WIDTH - ref_t.opb[($clog2(`DATA_WIDTH) - 1):0]) ) ) & ( { {(`DATA_WIDTH){ 1'b0 }} , { (`DATA_WIDTH ){1'b1} } } );
+			12: begin
+				if(ref_t.inp_valid == 3) begin
+					ref_t.res = 
+						( ( ref_t.opa << ref_t.opb[($clog2(`DATA_WIDTH) - 1):0] ) | (ref_t.opa >> ( `DATA_WIDTH - ref_t.opb[($clog2(`DATA_WIDTH) - 1):0]) ) ) & ( { {(`DATA_WIDTH){ 1'b0 }} , { (`DATA_WIDTH ){1'b1} } } );
 
 					if(|(ref_t.opb[ `DATA_WIDTH - 1 : ($clog2(`DATA_WIDTH) + 1)])) ref_t.err = 1; 
 					else                                                           ref_t.err = 0;
-				  end
-				  else ref_t.err = 1;
-			    end
+				end
+				else ref_t.err = 1;
+			end
 
 			13: begin // ROTATE RIGHT
-				 if(ref_t.inp_valid == 3) begin
+				if(ref_t.inp_valid == 3) begin
 					ref_t.res[ `DATA_WIDTH : 0 ] = 
-					( ( ref_t.opa >> ref_t.opb[($clog2(`DATA_WIDTH) - 1):0] ) | ( ref_t.opa << ( `DATA_WIDTH - ref_t.opb[($clog2(`DATA_WIDTH) - 1):0]) ) ) & ( { { `DATA_WIDTH{1'b0} } , { `DATA_WIDTH{1'b1} } } );
+						( ( ref_t.opa >> ref_t.opb[($clog2(`DATA_WIDTH) - 1):0] ) | ( ref_t.opa << ( `DATA_WIDTH - ref_t.opb[($clog2(`DATA_WIDTH) - 1):0]) ) ) & ( { { `DATA_WIDTH{1'b0} } , { `DATA_WIDTH{1'b1} } } );
 
 					if(|(ref_t.opb[ `DATA_WIDTH - 1 : ($clog2(`DATA_WIDTH) + 1)])) ref_t.err = 1; 
 					else                                                           ref_t.err = 0;
-			   end
-				 else ref_t.err = 1;
-			   end
-	
-		  default : begin
+				end
+				else ref_t.err = 1;
+			end
+
+			default : begin
 				ref_t.err = 1;
 			end
 		endcase
 	endtask
-
 endclass
 
 

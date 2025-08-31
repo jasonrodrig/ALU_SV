@@ -5,7 +5,7 @@ class alu_monitor;
 	virtual alu_interface.mon_cb vif;
 
 	covergroup output_coverage;
-	RESULT:         coverpoint monitor_trans.res { bins opb = {[0:255]} with (item / 32 ); }
+		RESULT:         coverpoint monitor_trans.res { bins opb = {[0:255]} with (item / 32 ); }
 		OFLOW:        coverpoint monitor_trans.oflow     { bins oflow[] = { 0 , 1 }; }
 		COUT:         coverpoint monitor_trans.cout      { bins cout[]  = { 0 , 1 }; }
 		GREATER:      coverpoint monitor_trans.g         { bins g[]     = { 0 , 1 }; }

@@ -1,6 +1,5 @@
-//`include "defines.sv"
 interface alu_interface(input bit clk);
-	
+
 	logic [ `DATA_WIDTH - 1 : 0 ] opa , opb ;
 	logic cin, mode , ce , rst;
 	logic [1:0] inp_valid;
@@ -14,14 +13,14 @@ interface alu_interface(input bit clk);
 		output opa , opb , cin , mode , cmd , inp_valid;
 	endclocking
 
-  clocking mon_cb@(posedge clk);
+	clocking mon_cb@(posedge clk);
 		default input #0 output #0;
 		input rst, ce;
 		input opa , opb , cin , mode , cmd , inp_valid;
 		input res , oflow , cout , g , l , e , err;
 	endclocking
 
-  clocking reference_cb@(posedge clk);
+	clocking reference_cb@(posedge clk);
 		default input #0 output #0;
 		input rst, ce;
 		input opa , opb , cin , mode , cmd , inp_valid;
@@ -29,7 +28,7 @@ interface alu_interface(input bit clk);
 	endclocking
 
 	modport driv(clocking driv_cb);
-	modport mon(clocking mon_cb);
-	modport reference(clocking reference_cb);
+		modport mon(clocking mon_cb);
+			modport reference(clocking reference_cb);
 
 endinterface
