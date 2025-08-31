@@ -1,0 +1,335 @@
+# vsim -c alu_top -do "run -all; quit" 
+# Start time: 00:54:55 on Jul 30,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: alu_top.sv(33): (vopt-2241) Connection width does not match width of port 'RES'. The port definition is at: alu_design.v(1).
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.alu_top_sv_unit(fast)
+# Loading work.alu_top(fast)
+# Loading work.alu_interface(fast)
+# run -all
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	generator signals
+#  Time: 0 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 1, cin = 1 , opa = 11 , opb = 20
+#  Time: 0 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	generator signals
+#  Time: 0 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 1, cin = 1 , opa = 104 , opb = 117
+#  Time: 0 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	generator signals
+#  Time: 0 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 1, cin = 0 , opa = 234 , opb = 114
+#  Time: 0 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                   10
+# time:                  10, dut : operand_valid is x , opernad_valid2 is x
+# time:                  10, dut : operand 1 is   x , opernad2 is   x
+# dut time =                   30
+# time:                  30, dut : operand_valid is x , opernad_valid2 is x
+# time:                  30, dut : operand 1 is   x , opernad2 is   x
+# dut time =                   50
+# time:                  50, dut : operand_valid is x , opernad_valid2 is x
+# time:                  50, dut : operand 1 is   x , opernad2 is   x
+# Enable = 1 Driving Signal
+# driver count =           1
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 50 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 2, cin = 1 , opa = 11 , opb = 20
+#  Time: 50 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	MONITOR STARTED
+#  Time: 50 , rst = 0 , ce = 0 , mode = 0 , cmd = 0 , inp_valid = 0, cin = 0 , opa = 0 , opb = 0
+#  Time: 50 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                   70
+# time:                  70, dut : operand_valid is x , opernad_valid2 is x
+# time:                  70, dut : operand 1 is   x , opernad2 is   x
+# driver count =           2
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 70 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 1, cin = 1 , opa = 11 , opb = 20
+#  Time: 70 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                   90
+# time:                  90, dut : operand_valid is x , opernad_valid2 is x
+# time:                  90, dut : operand 1 is   x , opernad2 is   x
+# driver count =           3
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 90 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 2, cin = 1 , opa = 11 , opb = 20
+#  Time: 90 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                  110
+# time:                 110, dut : operand_valid is x , opernad_valid2 is x
+# time:                 110, dut : operand 1 is   x , opernad2 is   x
+# driver count =           4
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 110 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 110 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	Driving Signals
+#  Time: 110 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 110 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	 16 clock cycle driving signals 
+#  Time: 110 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 110 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# monitor count =           1
+# reference_flag = 00000000000000000000000000000000
+# dut time =                  130
+# time:                 130, dut : operand_valid is x , opernad_valid2 is x
+# time:                 130, dut : operand 1 is  11 , opernad2 is  20
+# monitor count =           2
+# CE is activated
+# MODE1 ACRIVATED
+# dut time =                  150
+# time:                 150, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 150, dut : operand 1 is  11 , opernad2 is  20
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	MONITOR SIGNALS ENDED
+#  Time: 150 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 150 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	REFERENCE SIGNALS 
+#  Time: 150 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 150 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	scoreboard: monitor_signals
+#  Time: 150 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 150 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	scorebord: reference_signals
+#  Time: 150 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 150 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+#  	 COMPARISION ON MON & SCB REPORT 
+# NUMBER OF PACKET PASSED = 1
+# dut time =                  170
+# time:                 170, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 170, dut : operand 1 is  11 , opernad2 is  20
+# dut time =                  190
+# time:                 190, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 190, dut : operand 1 is  11 , opernad2 is  20
+# Enable = 1 Driving Signal
+# driver count =           1
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 190 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 1, cin = 1 , opa = 104 , opb = 117
+#  Time: 190 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	Monitor delay
+#  Time: 190 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 190 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	MONITOR STARTED
+#  Time: 190 , rst = 0 , ce = 0 , mode = 0 , cmd = 0 , inp_valid = 0, cin = 0 , opa = 0 , opb = 0
+#  Time: 190 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                  210
+# time:                 210, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 210, dut : operand 1 is  11 , opernad2 is  20
+# driver count =           2
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 210 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 2, cin = 1 , opa = 104 , opb = 117
+#  Time: 210 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                  230
+# time:                 230, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 230, dut : operand 1 is  11 , opernad2 is  20
+# driver count =           3
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 230 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 2, cin = 1 , opa = 104 , opb = 117
+#  Time: 230 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	MONITOR SIGNALS ENDED
+#  Time: 230 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 230 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	scoreboard: monitor_signals
+#  Time: 230 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 230 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                  250
+# time:                 250, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 250, dut : operand 1 is  11 , opernad2 is  20
+# driver count =           4
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 250 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 250 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	Driving Signals
+#  Time: 250 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 250 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	 16 clock cycle driving signals 
+#  Time: 250 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 250 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# reference_flag = 00000000000000000000000000000000
+# dut time =                  270
+# time:                 270, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 270, dut : operand 1 is 104 , opernad2 is 117
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	Monitor delay
+#  Time: 270 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 11 , opb = 20
+#  Time: 270 , res = 31 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	MONITOR STARTED
+#  Time: 270 , rst = 0 , ce = 0 , mode = 0 , cmd = 0 , inp_valid = 0, cin = 0 , opa = 0 , opb = 0
+#  Time: 270 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# CE is activated
+# MODE1 ACRIVATED
+# dut time =                  290
+# time:                 290, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 290, dut : operand 1 is 104 , opernad2 is 117
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	REFERENCE SIGNALS 
+#  Time: 290 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 290 , res = 221 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	scorebord: reference_signals
+#  Time: 290 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 290 , res = 221 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+#  	 COMPARISION ON MON & SCB REPORT 
+# NUMBER OF PACKET FAILED = 1
+# dut time =                  310
+# time:                 310, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 310, dut : operand 1 is 104 , opernad2 is 117
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	MONITOR SIGNALS ENDED
+#  Time: 310 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 310 , res = 221 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	scoreboard: monitor_signals
+#  Time: 310 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 310 , res = 221 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# dut time =                  330
+# time:                 330, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 330, dut : operand 1 is 104 , opernad2 is 117
+# Enable = 1 Driving Signal
+# driver count =           1
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	driver: 16 clock cycle
+#  Time: 330 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 0 , opa = 234 , opb = 114
+#  Time: 330 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	Driving Signals
+#  Time: 330 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 0 , opa = 234 , opb = 114
+#  Time: 330 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	 16 clock cycle driving signals 
+#  Time: 330 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 0 , opa = 234 , opb = 114
+#  Time: 330 , res = 0 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# reference_flag = 00000000000000000000000000000000
+# dut time =                  350
+# time:                 350, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 350, dut : operand 1 is 234 , opernad2 is 114
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	Monitor delay
+#  Time: 350 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 1 , opa = 104 , opb = 117
+#  Time: 350 , res = 221 , oflow = 0 , cout = 0 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# CE is activated
+# MODE1 ACRIVATED
+# dut time =                  370
+# time:                 370, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 370, dut : operand 1 is 234 , opernad2 is 114
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	REFERENCE SIGNALS 
+#  Time: 370 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 0 , opa = 234 , opb = 114
+#  Time: 370 , res = 348 , oflow = 0 , cout = 1 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+# 	scorebord: reference_signals
+#  Time: 370 , rst = 0 , ce = 0 , mode = 1 , cmd = 0 , inp_valid = 3, cin = 0 , opa = 234 , opb = 114
+#  Time: 370 , res = 348 , oflow = 0 , cout = 1 , g = 0 , l = 0 , e = 0 , err = 0
+# 
+# |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+#  	 COMPARISION ON MON & SCB REPORT 
+# NUMBER OF PACKET FAILED = 2
+# dut time =                  390
+# time:                 390, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 390, dut : operand 1 is 234 , opernad2 is 114
+# dut time =                  410
+# time:                 410, dut : operand_valid is 1 , opernad_valid2 is 1
+# time:                 410, dut : operand 1 is 234 , opernad2 is 114
+# ** Note: $finish    : alu_top.sv(42)
+#    Time: 410 ns  Iteration: 3  Instance: /alu_top
+# End time: 00:54:57 on Jul 30,2025, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1
