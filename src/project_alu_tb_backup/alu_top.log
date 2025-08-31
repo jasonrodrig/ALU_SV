@@ -1,0 +1,61 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 23:19:15 on Aug 04,2025
+vlog -sv "+acc" "+cover" "+fcover" -l alu_top.log alu_top.sv 
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(68): (vlog-2730) Undefined variable: 'CMD'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(69): (vlog-2730) Undefined variable: 'MODE'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(70): (vlog-2730) Undefined variable: 'INP_VALID'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(84): (vlog-2730) Undefined variable: 'CMD'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(85): (vlog-2730) Undefined variable: 'MODE'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(86): (vlog-2730) Undefined variable: 'INP_VALID'.
+** Error: (vlog-13069) ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(86): near "[": syntax error, unexpected '['.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(100): (vlog-2730) Undefined variable: 'CMD'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(101): (vlog-2730) Undefined variable: 'MODE'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(102): (vlog-2730) Undefined variable: 'INP_VALID'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(116): (vlog-2730) Undefined variable: 'CMD'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(117): (vlog-2730) Undefined variable: 'MODE'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** while parsing file included at alu_test.sv(1)
+** while parsing file included at alu_environment.sv(2)
+** at alu_transaction.sv(118): (vlog-2730) Undefined variable: 'INP_VALID'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** at alu_test.sv(109): Invalid type 'arithmatic_one_operand'. Please check the type of the variable 'test2'.
+** Error: ** while parsing file included at alu_top.sv(3)
+** at alu_test.sv(129): (vlog-2730) Undefined variable: 'test2'.
+End time: 23:19:16 on Aug 04,2025, Elapsed time: 0:00:01
+Errors: 15, Warnings: 0
